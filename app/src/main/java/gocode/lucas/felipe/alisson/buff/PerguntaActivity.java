@@ -173,7 +173,7 @@ public class PerguntaActivity extends AppCompatActivity {
             } else {
                 c++;
                 if (c > numP){
-                    tempo.cancel();
+
                     rquestao = true;
                     Intent intent = new Intent(this,ResultadoActivity.class);
                     intent.putExtra("IDS", ids);
