@@ -30,17 +30,17 @@ public class ResultadoActivity extends AppCompatActivity {
         tvResultado = (TextView) findViewById(R.id.tvResultadoResultado);
         tvPontos = (TextView) findViewById(R.id.tvResultadoPontos);
         if (venceu){
-            setBut(btnResultadoD, "Inicio", "##c1c1c1", InicioActivity.class);
+            setBut(btnResultadoD, "Inicio", "#FF666666", InicioActivity.class);
             btnResultadoE.setVisibility(View.INVISIBLE);
             tvResultado.setText("Você Ganhou !");
         } else {
             if (errou){
-                setBut(btnResultadoD, "Inicio", "#c1c1c1", InicioActivity.class);
+                setBut(btnResultadoD, "Inicio", "#FF666666", InicioActivity.class);
                 btnResultadoE.setVisibility(View.INVISIBLE);
                 tvResultado.setText("Você perdeu !");
                 tvPontos.setText("Você marcou " + ids[20] + " pontos" );
             } else {
-                setBut(btnResultadoE, "Desistir","#c1c1c1", InicioActivity.class);
+                setBut(btnResultadoE, "Desistir","#FF666666", InicioActivity.class);
                 setBut(btnResultadoD, "Proxima pergunta ?", "#FF3647A3", PerguntaActivity.class);
             }
         }

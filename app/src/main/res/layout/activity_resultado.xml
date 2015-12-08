@@ -22,15 +22,19 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="5dp">
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnResultadoE"/>
+                android:id="@+id/btnResultadoE"
+                android:background="#FF666666" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnResultadoD"/>
+                android:id="@+id/btnResultadoD"
+                android:background="#FF666666"
+                android:layout_marginLeft="5dp"/>
         </LinearLayout>
 
         <TextView
