@@ -10,9 +10,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:gravity="center">
-
+        android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -20,61 +18,69 @@
             android:textColor="#ff0900"
             android:id="@+id/tvPerguntaTempo"
             android:textSize="20dp"
-            android:layout_gravity="center" />
+            android:layout_gravity="center_horizontal" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="aaaaaaaaaaaaaaaaaaaaa"
+                android:textSize="20dp"
+                android:textColor="#FFF"
+                android:id="@+id/tvPerguntaPergunta"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="25dp">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFF"
+                    android:id="@+id/rbPerguntaAlternativa1" />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFF"
+                    android:id="@+id/rbPerguntaAlternativa2"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFF"
+                    android:id="@+id/rbPerguntaAlternativa3"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#FFF"
+                    android:id="@+id/rbPerguntaAlternativa4"/>
+            </RadioGroup>
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="70dp"
+                android:text="Confirmar"
+                android:textSize="18dp"
+                android:id="@+id/btnPerguntaConfirmar"/>
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="aaaaaaaaaaaaaaaaaaaaa"
-            android:textSize="20dp"
-            android:textColor="#FFF"
-            android:id="@+id/tvPerguntaPergunta"/>
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="#FFF"
-                android:id="@+id/rbPerguntaAlternativa1" />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="#FFF"
-                android:id="@+id/rbPerguntaAlternativa2"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="#FFF"
-                android:id="@+id/rbPerguntaAlternativa3"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:textColor="#FFF"
-                android:id="@+id/rbPerguntaAlternativa4"/>
-        </RadioGroup>
-        <Button
-            android:layout_width="180dp"
-            android:layout_height="70dp"
-            android:text="Confirmar"
-            android:textColor="#444"
-            android:textSize="18dp"
-            android:id="@+id/btnPerguntaConfirmar"/>
+            android:id="@+id/tvPerguntaPontos"
+            android:layout_gravity="right"
+            android:textSize="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvPerguntaPontos"
-        android:layout_gravity="right"
-        android:textSize="25dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
