@@ -52,6 +52,10 @@ public class ResultadoActivity extends AppCompatActivity {
                     }
                 }.start();
                 btnResultadoE.setText("Voltando para o inicio em ...");
+                btnResultadoD.setBackgroundColor(Color.parseColor("#00FFFFFF"));
+                btnResultadoE.setBackgroundColor(Color.parseColor("#00FFFFFF"));
+                btnResultadoE.setTextColor(Color.RED);
+                btnResultadoD.setTextColor(Color.RED);
                 tvResultado.setText("Você perdeu !");
                 tvPontos.setText("Você marcou " + ids[20] + " pontos" );
             } else {
