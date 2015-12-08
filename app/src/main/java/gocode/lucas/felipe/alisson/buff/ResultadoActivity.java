@@ -41,7 +41,7 @@ public class ResultadoActivity extends AppCompatActivity {
                 tvPontos.setText("Você marcou " + ids[20] + " pontos" );
             } else {
                 setBut(btnResultadoE, "Desistir","#FF666666", InicioActivity.class);
-                setBut(btnResultadoD, "Proxima pergunta ?", "#FF3647A3", PerguntaActivity.class);
+                setBut(btnResultadoD, "Proxima pergunta ?", "#FF666666", PerguntaActivity.class);
             }
         }
     }
