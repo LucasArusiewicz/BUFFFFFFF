@@ -63,6 +63,7 @@
             android:layout_width="180dp"
             android:layout_height="70dp"
             android:text="Confirmar"
+            android:textColor="#444"
             android:textSize="18dp"
             android:id="@+id/btnPerguntaConfirmar"/>
     </LinearLayout>
