@@ -38,6 +38,8 @@ public class ResultadoActivity extends AppCompatActivity {
                 setBut(btnResultadoD, "Inicio", "#FF666666", InicioActivity.class);
                 btnResultadoE.setVisibility(View.INVISIBLE);
                 btnResultadoE.setWidth(1);
+                btnResultadoE.setScaleY(10);
+                btnResultadoE.setScaleX(10);
                 tvResultado.setText("Você perdeu !");
                 tvPontos.setText("Você marcou " + ids[20] + " pontos" );
             } else {
