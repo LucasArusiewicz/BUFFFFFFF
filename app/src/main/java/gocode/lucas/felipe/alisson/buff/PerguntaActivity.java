@@ -86,6 +86,7 @@ public class PerguntaActivity extends AppCompatActivity {
 
     public void verifica(){
         if (acertou()){
+            tempo.cancel();
             Intent intent = new Intent(this,ResultadoActivity.class);
             intent.putExtra("IDS", ids);
             intent.putExtra("VENCEU",!rquestao);
@@ -94,6 +95,7 @@ public class PerguntaActivity extends AppCompatActivity {
             finish();
             startActivity(intent);
         } else {
+            tempo.cancel();
             Intent intent = new Intent(this,ResultadoActivity.class);
             intent.putExtra("IDS", ids);
             intent.putExtra("VENCEU",!rquestao);
@@ -153,7 +155,7 @@ public class PerguntaActivity extends AppCompatActivity {
             numP = q.getNumPerguntas();
 
             boolean inserido = false;
-            //passa array
+
             for (int i = 0; i < ids.length;i++){
                 if (ids[i] == id){
                     inserido = true;
@@ -171,6 +173,7 @@ public class PerguntaActivity extends AppCompatActivity {
             } else {
                 c++;
                 if (c > numP){
+                    tempo.cancel();
                     rquestao = true;
                     Intent intent = new Intent(this,ResultadoActivity.class);
                     intent.putExtra("IDS", ids);
