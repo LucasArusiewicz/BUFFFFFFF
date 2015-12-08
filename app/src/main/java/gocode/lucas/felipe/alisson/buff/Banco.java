@@ -23,10 +23,12 @@ public class Banco extends SQLiteOpenHelper {
 
         db.execSQL("CREATE TABLE IF NOT EXISTS questoes ( _id INTEGER PRIMARY KEY AUTOINCREMENT, pergunta TEXT, resposta_correta TEXT, resposta_incorreta_a TEXT, resposta_incorreta_b TEXT, resposta_incorreta_c TEXT);");
         db.execSQL("INSERT INTO questoes (_id, pergunta, resposta_correta, resposta_incorreta_a, resposta_incorreta_b, resposta_incorreta_c) SELECT 1,'Qual a montanha mais alta do mundo?','Monte Everest','Kangchenjunga','Cho Oyu','Manaslu' WHERE NOT EXISTS ( SELECT 1 FROM questoes WHERE _id = 1 );");
-        db.execSQL("INSERT INTO questoes (_id, pergunta, resposta_correta, resposta_incorreta_a, resposta_incorreta_b, resposta_incorreta_c) SELECT 2,'Qsdgsdfjnsfjnskf?','sdgsdfad','sdgsdafaf','sdfagsdfafs','asfsdgfasdsf' WHERE NOT EXISTS ( SELECT 1 FROM questoes WHERE _id = 2 );");
+        db.execSQL("INSERT INTO questoes (_id, pergunta, resposta_correta, resposta_incorreta_a, resposta_incorreta_b, resposta_incorreta_c) SELECT 2,'Em que Ano Steve Paul Jobs morreu?','24 de fevereiro de 2011','23 de fevereiro de 2016','1  de Janeiro   de 2001','18 de fevereiro de 2005' WHERE NOT EXISTS ( SELECT 1 FROM questoes WHERE _id = 2 );");
         db.execSQL("INSERT INTO questoes (_id, pergunta, resposta_correta, resposta_incorreta_a, resposta_incorreta_b, resposta_incorreta_c) SELECT 3,'Linha imaginaria utilizada pela cartografia, organizada na vertical?','Merediano','Tropico','Paralelograma','Equandor' WHERE NOT EXISTS ( SELECT 1 FROM questoes WHERE _id = 3 );");
-        db.execSQL("INSERT INTO questoes (_id, pergunta, resposta_correta, resposta_incorreta_a, resposta_incorreta_b, resposta_incorreta_c) SELECT 4,'fffffffffffff?','sdgsdfad','sdgsdafaf','sdfagsdfafs','asfsdgfasdsf' WHERE NOT EXISTS ( SELECT 1 FROM questoes WHERE _id = 4 );");
-
+        db.execSQL("INSERT INTO questoes (_id, pergunta, resposta_correta, resposta_incorreta_a, resposta_incorreta_b, resposta_incorreta_c) SELECT 4,'Sócrates foi um...','Filósofo ateniense do perído dlássico da Grécia Antiga','Filósofo americado do perído dlássico de Roma','Filósofo brasileiro do período clássico do Brasil','Filósofo enigmático dos dias de hoje' WHERE NOT EXISTS ( SELECT 1 FROM questoes WHERE _id = 4 );");
+        db.execSQL("INSERT INTO questoes (_id, pergunta, resposta_correta, resposta_incorreta_a, resposta_incorreta_b, resposta_incorreta_c) SELECT 3,'Qual a massa atômica do hidrogênio?','1','3','8','4' WHERE NOT EXISTS ( SELECT 1 FROM questoes WHERE _id = 3 );");
+        db.execSQL("INSERT INTO questoes (_id, pergunta, resposta_correta, resposta_incorreta_a, resposta_incorreta_b, resposta_incorreta_c) SELECT 3,'Magnésio de acordo com a tabela periódica é um...','Metal Alcalino-terroso','Metal Alcalino','Metalde transição','Lantanídeo' WHERE NOT EXISTS ( SELECT 1 FROM questoes WHERE _id = 3 );");
+        db.execSQL("INSERT INTO questoes (_id, pergunta, resposta_correta, resposta_incorreta_a, resposta_incorreta_b, resposta_incorreta_c) SELECT 3,'Qual a massa atômica do hidrogênio?','1','3','8','4' WHERE NOT EXISTS ( SELECT 1 FROM questoes WHERE _id = 3 );");
     }
 
     @Override
