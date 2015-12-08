@@ -37,7 +37,7 @@ public class PerguntaActivity extends AppCompatActivity {
         rbAlternativa3 = (RadioButton) findViewById(R.id.rbPerguntaAlternativa3);
         rbAlternativa4 = (RadioButton) findViewById(R.id.rbPerguntaAlternativa4);
         tvTempo = (TextView) findViewById(R.id.tvPerguntaTempo);
-        btnConfirmar = (Button) findViewById(R.id.teste);
+        btnConfirmar = (Button) findViewById(R.id.btnPerguntaConfirmar);
         random = new Random();
         alternativas = new RadioButton[4];
         resErrada = new String[3];
@@ -82,7 +82,6 @@ public class PerguntaActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     public void verifica(){
@@ -102,6 +101,7 @@ public class PerguntaActivity extends AppCompatActivity {
             intent.putExtra("Count",c);
             finish();
             startActivity(intent);
+
         }
     }
 
