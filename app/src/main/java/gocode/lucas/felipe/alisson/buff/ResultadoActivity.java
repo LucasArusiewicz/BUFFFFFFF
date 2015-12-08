@@ -37,9 +37,11 @@ public class ResultadoActivity extends AppCompatActivity {
             if (errou){
                 setBut(btnResultadoD, "Inicio", "#FF666666", InicioActivity.class);
                 btnResultadoE.setVisibility(View.INVISIBLE);
+                btnResultadoE.setWidth(1);
                 tvResultado.setText("Você perdeu !");
                 tvPontos.setText("Você marcou " + ids[20] + " pontos" );
             } else {
+                tvResultado.setText("Parabéns, você acertou !");
                 setBut(btnResultadoE, "Desistir","#FF666666", InicioActivity.class);
                 setBut(btnResultadoD, "Proxima pergunta ?", "#FF666666", PerguntaActivity.class);
             }
