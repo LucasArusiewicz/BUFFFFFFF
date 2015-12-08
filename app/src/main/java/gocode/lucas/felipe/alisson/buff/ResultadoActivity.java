@@ -12,7 +12,7 @@ import org.w3c.dom.Text;
 
 public class ResultadoActivity extends AppCompatActivity {
 
-    private Button btnResultadoD;
+    private Button btnResultadoD, btnResultadoE;
     private TextView tvResultado, tvPontos;
     private Bundle bundle;
     private int ids[] = new int[21];
@@ -26,17 +26,21 @@ public class ResultadoActivity extends AppCompatActivity {
         boolean venceu = bundle.getBoolean("VENCEU");
         boolean errou = bundle.getBoolean("ERROU");
         btnResultadoD = (Button) findViewById(R.id.btnResultadoD);
+        btnResultadoE = (Button) findViewById(R.id.btnResultadoE);
         tvResultado = (TextView) findViewById(R.id.tvResultadoResultado);
         tvPontos = (TextView) findViewById(R.id.tvResultadoPontos);
         if (venceu){
-            setBut(btnResultadoD, "Inicio", "#FF3647A3", InicioActivity.class);
+            setBut(btnResultadoD, "Inicio", "##c1c1c1", InicioActivity.class);
+            btnResultadoE.setVisibility(View.INVISIBLE);
             tvResultado.setText("Você Ganhou !");
         } else {
             if (errou){
-                setBut(btnResultadoD, "Inicio", "#FF3647A3", InicioActivity.class);
+                setBut(btnResultadoD, "Inicio", "#c1c1c1", InicioActivity.class);
+                btnResultadoE.setVisibility(View.INVISIBLE);
                 tvResultado.setText("Você perdeu !");
                 tvPontos.setText("Você marcou " + ids[20] + " pontos" );
             } else {
+                setBut(btnResultadoE, "Desistir","#c1c1c1", InicioActivity.class);
                 setBut(btnResultadoD, "Proxima pergunta ?", "#FF3647A3", PerguntaActivity.class);
             }
         }
@@ -59,5 +63,6 @@ public class ResultadoActivity extends AppCompatActivity {
     public void setBut(Button botao, String texto, String cor){
         botao.setBackgroundColor(Color.parseColor(cor));
         botao.setText(texto);
+
     }
 }
