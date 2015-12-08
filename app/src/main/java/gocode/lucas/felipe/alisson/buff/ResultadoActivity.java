@@ -37,7 +37,7 @@ public class ResultadoActivity extends AppCompatActivity {
                 tvResultado.setText("Você perdeu !");
                 tvPontos.setText("Você marcou " + ids[20] + " pontos" );
             } else {
-                setBut(btnResultadoD, "Proxima pergunta", "#FF3647A3", PerguntaActivity.class);
+                setBut(btnResultadoD, "Proxima pergunta ?", "#FF3647A3", PerguntaActivity.class);
             }
         }
     }

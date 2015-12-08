@@ -155,7 +155,7 @@ public class PerguntaActivity extends AppCompatActivity {
             numP = q.getNumPerguntas();
 
             boolean inserido = false;
-            //passa array
+
             for (int i = 0; i < ids.length;i++){
                 if (ids[i] == id){
                     inserido = true;
