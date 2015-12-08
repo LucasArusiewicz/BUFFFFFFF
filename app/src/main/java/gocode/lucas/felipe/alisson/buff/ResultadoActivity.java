@@ -2,6 +2,7 @@ package gocode.lucas.felipe.alisson.buff;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,16 +36,27 @@ public class ResultadoActivity extends AppCompatActivity {
             tvResultado.setText("Você Ganhou !");
         } else {
             if (errou){
-                setBut(btnResultadoD, "Inicio", "#FF666666", InicioActivity.class);
-                btnResultadoE.setVisibility(View.INVISIBLE);
-                btnResultadoE.setWidth(1);
-                btnResultadoE.setScaleY(10);
-                btnResultadoE.setScaleX(10);
+                new CountDownTimer(3000,1000){
+
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+                        btnResultadoD.setText("" + millisUntilFinished / 1000);
+                    }
+
+                    @Override
+                    public void onFinish() {
+                        Intent intent = new Intent(getApplicationContext(), InicioActivity.class);
+                        finish();
+                        startActivity(intent);
+                        this.cancel();
+                    }
+                }.start();
+                btnResultadoE.setText("Voltando para o inicio em ...");
                 tvResultado.setText("Você perdeu !");
                 tvPontos.setText("Você marcou " + ids[20] + " pontos" );
             } else {
                 tvResultado.setText("Parabéns, você acertou !");
-                setBut(btnResultadoE, "Desistir","#FF666666", InicioActivity.class);
+                setBut(btnResultadoE, "Desistir", "#FF666666", InicioActivity.class);
                 setBut(btnResultadoD, "Proxima pergunta ?", "#FF666666", PerguntaActivity.class);
             }
         }
