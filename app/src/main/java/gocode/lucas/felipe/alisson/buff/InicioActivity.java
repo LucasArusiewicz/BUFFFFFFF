@@ -25,7 +25,7 @@ public class InicioActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder dlg = new AlertDialog.Builder(InicioActivity.this);
                 dlg.setTitle("BuffQuiz - Como Jogar");
-                dlg.setMessage("Precione");
+                dlg.setMessage("Para Jogar clique no botão começar, e responda as questões corretamente.");
                 dlg.setCancelable(false);
                 dlg.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     @Override
