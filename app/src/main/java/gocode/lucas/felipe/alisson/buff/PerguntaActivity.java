@@ -156,12 +156,14 @@ public class PerguntaActivity extends AppCompatActivity {
 
             boolean inserido = false;
 
+            //verifica se tem numero igual retorna t,f
             for (int i = 0; i < ids.length;i++){
                 if (ids[i] == id){
                     inserido = true;
                     i = ids.length;
                 }
             }
+            //se retorna false
             if (!inserido){
                 for (int i = 0; i < ids.length;i++){
                     if (ids[i] == 0){
@@ -170,6 +172,7 @@ public class PerguntaActivity extends AppCompatActivity {
                     }
                 }
                 rquestao = true;
+            //se retorna true
             } else {
                 c++;
                 if (c > numP){
