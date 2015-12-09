@@ -31,8 +31,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/btnResultadoE"
                 android:background="#FF666666"
-                />
+                android:padding="5dp"/>
             <Button
+                android:padding="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnResultadoD"

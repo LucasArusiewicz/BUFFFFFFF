@@ -17,6 +17,7 @@ public class ResultadoActivity extends AppCompatActivity {
     private TextView tvResultado, tvPontos;
     private Bundle bundle;
     private int ids[] = new int[21];
+    private CountDownTimer tempo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,27 +31,30 @@ public class ResultadoActivity extends AppCompatActivity {
         btnResultadoE = (Button) findViewById(R.id.btnResultadoE);
         tvResultado = (TextView) findViewById(R.id.tvResultadoResultado);
         tvPontos = (TextView) findViewById(R.id.tvResultadoPontos);
+        tempo = new CountDownTimer(5000,1000){
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                btnResultadoD.setText("" + millisUntilFinished / 1000);
+            }
+
+            @Override
+            public void onFinish() {
+                finish();
+                //this.cancel();
+            }
+        };
         if (venceu){
             setBut(btnResultadoD, "Inicio", "#FF666666", InicioActivity.class);
-            btnResultadoE.setVisibility(View.INVISIBLE);
+            btnResultadoE.setText("Voltando para o inicio em ...");
+            btnResultadoD.setBackgroundColor(Color.parseColor("#00FFFFFF"));
+            btnResultadoE.setBackgroundColor(Color.parseColor("#00FFFFFF"));
+            btnResultadoE.setTextColor(Color.RED);
+            btnResultadoD.setTextColor(Color.RED);
             tvResultado.setText("Você Ganhou !");
         } else {
             if (errou){
-                new CountDownTimer(5000,1000){
-
-                    @Override
-                    public void onTick(long millisUntilFinished) {
-                        btnResultadoD.setText("" + millisUntilFinished / 1000);
-                    }
-
-                    @Override
-                    public void onFinish() {
-                        Intent intent = new Intent(getApplicationContext(), InicioActivity.class);
-                        finish();
-                        startActivity(intent);
-                        this.cancel();
-                    }
-                }.start();
+                tempo.start();
                 btnResultadoE.setText("Voltando para o inicio em ...");
                 btnResultadoD.setBackgroundColor(Color.parseColor("#00FFFFFF"));
                 btnResultadoE.setBackgroundColor(Color.parseColor("#00FFFFFF"));
@@ -60,8 +64,9 @@ public class ResultadoActivity extends AppCompatActivity {
                 tvPontos.setText("Você marcou " + ids[20] + " pontos" );
             } else {
                 tvResultado.setText("Parabéns, você acertou !");
-                setBut(btnResultadoE, "Desistir", "#FF666666", InicioActivity.class);
+                setBut(btnResultadoE, "Desistir", "#FF666666");
                 setBut(btnResultadoD, "Proxima pergunta ?", "#FF666666", PerguntaActivity.class);
+                tvPontos.setText("Você está com " + ids[20] + " pontos");
             }
         }
     }
@@ -83,6 +88,11 @@ public class ResultadoActivity extends AppCompatActivity {
     public void setBut(Button botao, String texto, String cor){
         botao.setBackgroundColor(Color.parseColor(cor));
         botao.setText(texto);
-
+        botao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

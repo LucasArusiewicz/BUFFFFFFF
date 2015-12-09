@@ -51,10 +51,15 @@ public class InicioActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), PerguntaActivity.class);
-                intent.putExtra("IDS",ids);
+                intent.putExtra("IDS", ids);
                 startActivity(intent);
             }
         });
 
+    }
+
+    @Override
+     protected void onRestart() {
+        super.onRestart();
     }
 }

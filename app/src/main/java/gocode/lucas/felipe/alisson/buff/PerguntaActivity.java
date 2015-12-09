@@ -84,6 +84,18 @@ public class PerguntaActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        tempo.cancel();
+    }
+
     public void verifica(){
         if (acertou()){
             tempo.cancel();
