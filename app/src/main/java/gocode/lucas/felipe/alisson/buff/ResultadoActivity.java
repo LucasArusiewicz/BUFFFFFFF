@@ -41,11 +41,10 @@ public class ResultadoActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 finish();
-                //this.cancel();
             }
         };
         if (venceu){
-            setBut(btnResultadoD, "Inicio", "#FF666666", InicioActivity.class);
+            tempo.start();
             btnResultadoE.setText("Voltando para o inicio em ...");
             btnResultadoD.setBackgroundColor(Color.parseColor("#00FFFFFF"));
             btnResultadoE.setBackgroundColor(Color.parseColor("#00FFFFFF"));
